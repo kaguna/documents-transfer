@@ -1,0 +1,36 @@
+<div class="col-sm-offset-4">
+  <div class="col-sm-6">
+    <%= form_with(model: document, local: true) do |form| %>
+      <% if document.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+          <ul>
+            <% document.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <div class="row form-group">
+          <%= form.label :Name %>
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class="row form-group">
+          <%= form.label :Choose %>
+          <%= form.file_field :file, class: 'form-control' %>
+        </div>
+        <div class="row form-group">
+            <%= form.submit 'Upload', class: 'btn btn-success btn-block' %>
+        </div>
+        <div class="row form-group">
+          <%= link_to '<< Back to files', home_path, class: 'btn btn-info btn-block' %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
