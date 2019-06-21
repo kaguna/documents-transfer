@@ -1,24 +1,30 @@
-# README
+# Document Tranfer App
+This enables user create account, upload and download files/documents.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### To test the app locally use the steps below.
+clone the repository
 
-Things you may want to cover:
+FOR HTTPS:
 
-* Ruby version
+`git clone https://github.com/kaguna/documents-transfer.git`
 
-* System dependencies
+FOR SSH:
+ 
+git@github.com:kaguna/documents-transfer.git
 
-* Configuration
+#### Change Directory into the project folder
+`$ cd documents-transfer`
 
-* Database creation
+#### Run bundle to install dependencies
+`$ bundle install`
 
-* Database initialization
+#### Create the db
+`$ rails db:create`
 
-* How to run the test suite
+#### Run server
+`$ rails S`
 
-* Services (job queues, cache servers, search engines, etc.)
+#### The app is hosted on Heroku
+https://docs-transfer-app.herokuapp.com/
 
-* Deployment instructions
 
-* ...
